@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/2.5.0/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio | Essam prog </title>
+    <style>
+        body {
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .dark {
+            width: 100px;
+            height: 100px;
+            border: 10px solid #fff;
+            border-radius: 50%;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .icon {
+            font-size: 4.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .icon.active {
+            transform: rotate(360deg);
+        }
+
+        .dark:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-logo">
+            <a href="#">
+                <img src="images/logo.png">
+            </a>
+        </div>
+    </nav>
+
+    <header class="container">
+        <div class="content">
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <span class="blur"></span>
+            <H1>Hi, I'm <span>Essam</span>, Web Developer</H1>
+            <p>
+                تصميم اول صفحه ويب
+                <a href="https://www.facebook.com/Essam02002/" target="_blank"><i class="ri-facebook-line"></i></a>
+                <a href="https://wa.me/201060560736"><i class="ri-whatsapp-line"></i></a>
+
+
+            </p>
+
+        </div>
+
+
+
+
+        <div class="image">
+            <img src="images/logo1.png" alt="Logo 1">
+            <img src="images/logo2.png" alt="Logo 2">
+            <img src="images/logo3.png" alt="Logo 3">
+            <div class="socials">
+
+
+                <a href="https://www.facebook.com/Essam02002/" target="_blank"><i class="ri-facebook-line"></i></a>
+                <a href="https://wa.me/201060560736"><i class="ri-whatsapp-line"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="dark" onclick="toggleDarkMode()">
+        <i class="icon ri-moon-clear-line"></i>
+    </div>
+
+
+    <script>
+        function toggleDarkMode() {
+            const icon = document.querySelector('.icon');
+            document.body.classList.toggle('dark-mode');
+            icon.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
